@@ -38,6 +38,10 @@ public class SplashScreen extends AppCompatActivity {
 
 
         MyPrefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        VideoView videoView = findViewById(R.id.videoView);
+        videoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.aquaspinsplash));
+        videoView.start();
+
 
         RequestQueue connectAPI = Volley.newRequestQueue(this);
         JSONObject requestBody = new JSONObject();
