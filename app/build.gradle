@@ -44,4 +44,7 @@ dependencies {
     implementation("org.greenrobot:eventbus:3.3.1")
     implementation 'com.appsflyer:af-android-sdk:6.9.0'
     implementation "com.android.installreferrer:installreferrer:2.2"
+
+    implementation 'com.facebook.android:facebook-android-sdk:16.2.0'
+
 }
