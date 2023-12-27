@@ -42,13 +42,13 @@ public class SplashScreen extends AppCompatActivity {
         RequestQueue connectAPI = Volley.newRequestQueue(this);
         JSONObject requestBody = new JSONObject();
         try {
-            requestBody.put("appid", "AB");
+            requestBody.put("appid", "7T");
             requestBody.put("package", getPackageName());
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        String endPoint = "https://backend.madgamingdev.com/api/gameid" + "?appid=AB&package=" + getPackageName();
+        String endPoint = "https://backend.madgamingdev.com/api/gameid" + "?appid=7T&package=" + getPackageName();
 
         JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.GET, endPoint, requestBody,
                 response -> {
