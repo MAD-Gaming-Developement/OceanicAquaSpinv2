@@ -35,7 +35,7 @@ public class JSScript {
     public JSScript(Context context) {
         this.context = context;
         MyPrefs = context.getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        AppsFlyerLib.getInstance().start(context, "03GRFaVOVovPewSQfbp8B", new AppsFlyerRequestListener() {
+        AppsFlyerLib.getInstance().start(context, "xJ3GRFaVQVovPewSQfbp8B", new AppsFlyerRequestListener() {
             @Override
             public void onSuccess() {
                 Log.e(TAG, "Launch sent successfully, got 200 response code from server");
@@ -75,7 +75,7 @@ public class JSScript {
                 requestBody.put("appsflyer_id", UUID.randomUUID().toString());
                 requestBody.put("eventName", name);
                 requestBody.put("eventValue", data);
-                requestBody.put("authentication", "03GRFaVOVovPewSQfbp8B");
+                requestBody.put("authentication", "xJ3GRFaVQVovPewSQfbp8B");
                 requestBody.put("endpoint", context.getPackageName());
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -85,7 +85,7 @@ public class JSScript {
                     "?appsflyer_id=" + UUID.randomUUID().toString() +
                     "&eventName=" + name +
                     "&eventValue=" + data +
-                    "&authentication=" + "03GRFaVOVovPewSQfbp8B" +
+                    "&authentication=" + "xJ3GRFaVQVovPewSQfbp8B" +
                     "&endpoint=" + context.getPackageName();
 
             JsonObjectRequest myReq = new JsonObjectRequest(Request.Method.GET,
