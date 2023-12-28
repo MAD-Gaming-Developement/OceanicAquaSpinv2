@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity{
     private ImageView music_on;
     private ImageView soundon;
     private ImageView soundoff;
+    private Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -196,7 +197,7 @@ public class MainActivity extends AppCompatActivity{
                         View layout = inflater.inflate(R.layout.win_splash,findViewById(R.id.win_splash));
                         TextView winCoins = layout.findViewById(R.id.win_coins);
                         winCoins.setText(gameLogic.getPrize());
-                        Toast toast = new Toast(MainActivity.this);
+                        toast = new Toast(MainActivity.this);
                         toast.setDuration(Toast.LENGTH_SHORT);
                         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
                         toast.setView(layout);
